@@ -13,4 +13,6 @@ For this simple app i gonna mainly used FastApi to handle the backend since i go
 9.  Let add a .gitignore file before we continue the  initial a Github public repo for our work. Create the gitignore file out of the app directory using the command  `touch .gitignore ~/Documents/health-dashboard/ ` on my machine path
 10. Inside the gitignore let add our .venv folder so that those package should be push to the github repo 
 11. With all set up can push our code into a github repository in peace starting from the path ~/Documents/health-dashboard/ using git vscode extension 
-12. 
+12. Now let us move to the main part of our application that is creating a file with name main.py using the command `touch  main.py ~/Documents/health-dashboard/app`
+13. Let move on to the test part of our application  for that we simple gonna create a folder with name tests which outside of the app directory which means is path is created using the **Commands:** `mkdir tests ~/Documents/health-dashboard`  then move on to the test folder uses **cd tests**
+14. Inside the test folder used the command touch and create a new file mainly `touch test_main.py` the let start adding our test inide the file and this file mainly used the pytest dependency for it work 

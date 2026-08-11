@@ -16,3 +16,9 @@ For this simple app i gonna mainly used FastApi to handle the backend since i go
 12. Now let us move to the main part of our application that is creating a file with name main.py using the command `touch  main.py ~/Documents/health-dashboard/app`
 13. Let move on to the test part of our application  for that we simple gonna create a folder with name tests which outside of the app directory which means is path is created using the **Commands:** `mkdir tests ~/Documents/health-dashboard`  then move on to the test folder uses **cd tests**
 14. Inside the test folder used the command touch and create a new file mainly `touch test_main.py` the let start adding our test inide the file and this file mainly used the pytest dependency for it work 
+15. After writing the test_main.py file we can then run our app just for testing the server in local using the **Command:** `uvicorn app.main:app --relaod` 
+16. Then will the running server add the screenshot images 
+17. Then we can move to the **MultiStage Dockerfile** which is mainly our second task while using a Multistage Dockerfile this mainly to build and light image for our server so that we can have a very-light  docker-image to deploy 
+18. Let create our Dockerfile `touch Dockerfile ~/Documents/health-dashboards` 
+19. Now we need to write the Dockerfile contain since i using FastApi for this app i will used the docker-images **python3.12-slim** as base image builder.
+20. 

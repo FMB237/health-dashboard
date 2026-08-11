@@ -21,4 +21,10 @@ For this simple app i gonna mainly used FastApi to handle the backend since i go
 17. Then we can move to the **MultiStage Dockerfile** which is mainly our second task while using a Multistage Dockerfile this mainly to build and light image for our server so that we can have a very-light  docker-image to deploy 
 18. Let create our Dockerfile `touch Dockerfile ~/Documents/health-dashboards` 
 19. Now we need to write the Dockerfile contain since i using FastApi for this app i will used the docker-images **python3.12-slim** as base image builder.
-20. 
+20. In writhing Dockerfile we mainly using the command **apt-get update && apt-get upgrade** which is the main standard here instend of using classic apt update 
+21. Then after correcting the errors inside the Dockerfile we can launch the Docker build process using the **Command:** `docker build  -t health-dashboard .`
+22. When the docker container is been build we then used the command **docker images** to list all our local docker images where we gonna find a container with name **health-dashboard:latest** and with a small size 
+23. Now let run the command using the docker **Command :** `docker run -p 8000:8000 health-dashboard` 
+24. Now let check our docker images size using the **Command:** `docker images | grep health-dashboard` i will add the screenshoy of it here
+25. 
+26. 

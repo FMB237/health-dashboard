@@ -40,3 +40,13 @@ For this simple app i gonna mainly used FastApi to handle the backend since i go
 33. After adding this variables move on to the github action section observe the pipeline.It mainly fails because absent of the **__init__.py** file in both the app folder and tests folder.So i added both and re-run the test for a succcesful result own. add the screenshot of the docker repo 
 34. Now i will then move on Render to deployed the app passing through the docker container. Since we have our app as a web-services and we have no DB to add so it is will be smooth app deployement with mainly no problem at all.
 35. Deployement was succesful
+
+# Let move for the addition set which is mainly the addition of a Frontend Page to this Project 
+**This is just moving from a simple Backend render page to a beautiful visual dashbaord**
+1. Let install jinja2 which is the FastAPI render template engine.This is just by using the command `pip install jinja2`
+2. Then send this modification to the requirements.txt of our FastAPI application.
+3. Create a simple templates folder inside our app folder and add a simple index.html file to it this is done by using the commands `mkdir templates && cd templates` and also `touch index.html`.
+4. Then let go tailwind css CDN script into our simple index.html file and start writing 
+5. Let create the route of this file inside our main.py file file 
+6. Now let move back to the html file to create the beautiful dashboard.
+7. 

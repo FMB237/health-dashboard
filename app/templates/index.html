@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Health Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 text-white min-h-screen flex items-center justify-center">
+    <div class="max-w-md w-full p-8 bg-slate-800 rounded-2xl shadow-2xl border border-slate-700 text-center">
+        <h1 class="text-3xl font-bold mb-2">System Health</h1>
+        <p class="text-slate-400 mb-8">Real-time monitoring status</p>
+        
+        <div id="status-card" class="p-6 rounded-xl bg-slate-700 mb-6 transition-all duration-500">
+            <div class="flex items-center justify-center gap-3">
+                <div id="status-indicator" class="w-4 h-4 rounded-full bg-gray-500 animate-pulse"></div>
+                <span id="status-text" class="text-xl font-semibold">Checking...</span>
+            </div>
+        </div>
+
+        <div class="text-sm text-slate-500">
+            Version: <span id="version">Loading...</span>
+        </div>
+    </div>
+
+    <script>
+        async function checkHealth() {
+            try {
+                const response = await fetch('/health');
+                const data = await response.json();
+                
+                const card = document.getElementById('status-card');
+                const indicator = document.getElementById('status-indicator');
+                const text = document.getElementById('status-text');
+
+                if (data.status === 'healthy') {
+                    card.classList.replace('bg-slate-700', 'bg-green-900/30');
+                    indicator.classList.replace('bg-gray-500', 'bg-green-500');
+                    indicator.classList.remove('animate-pulse');
+                    text.innerText = 'System Healthy';
+                    text.classList.add('text-green-400');
+                } else {
+                    throw new Error();
+                }
+            } catch (e) {
+                document.getElementById('status-card').classList.replace('bg-slate-700', 'bg-red-900/30');
+                document.getElementById('status-indicator').classList.replace('bg-gray-500', 'bg-red-500');
+                document.getElementById('status-text').innerText = 'System Down';
+                document.getElementById('status-text').classList.add('text-red-400');
+            }
+        }
+
+        async function getVersion() {
+            const response = await fetch('/');
+            const data = await response.json();
+            document.getElementById('version').innerText = data.version;
+        }
+
+        checkHealth();
+        getVersion();
+        setInterval(checkHealth, 10000); // Refresh every 10 seconds
+    </script>
+</body>
+</html>

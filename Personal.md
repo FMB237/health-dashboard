@@ -39,4 +39,4 @@ For this simple app i gonna mainly used FastApi to handle the backend since i go
 
 33. After adding this variables move on to the github action section observe the pipeline.It mainly fails because absent of the **__init__.py** file in both the app folder and tests folder.So i added both and re-run the test for a succcesful result own. add the screenshot of the docker repo 
 34. Now i will then move on Render to deployed the app passing through the docker container. Since we have our app as a web-services and we have no DB to add so it is will be smooth app deployement with mainly no problem at all.
-35. 
+35. Deployement was succesful

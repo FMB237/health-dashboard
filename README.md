@@ -1,4 +1,4 @@
-# 🚀 System Health Dashboard
+#  System Health Dashboard
 
 [![CI/CD Pipeline](https://github.com/fmb237/health-dashboard/actions/workflows/deploy.yml/badge.svg)](https://github.com/fmb237/health-dashboard/actions)
 [![Docker Image](https://img.shields.io/badge/Docker-Multi--Stage-blue)](https://hub.docker.com/)

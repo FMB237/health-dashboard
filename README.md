@@ -40,7 +40,7 @@ The project features a fully automated pipeline via GitHub Actions:
 ### 🖥️ Application in Action
 | Server Starting | Browser View (Frontend) | Running via Docker |
 | :---: | :---: | :---: |
-| ![Server Start](screenshots/Server_Start.png) | ![Browser View](screenshots/Server_on_browser.png) | ![Docker Run](screenshots/Running_Server_With_Docker.png) |
+| ![Server Start](screenshots/Server_Start.png) | ![Frontend View](screenshots/Frontend_image.png) | ![Docker Run](screenshots/Running_Server_With_Docker.png) |
 
 ### 📦 Optimization & Registry
 | Docker Image Size | Docker Hub Repository |

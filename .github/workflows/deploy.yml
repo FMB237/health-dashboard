@@ -24,7 +24,7 @@ jobs:
           pip install pytest httpx
           
       - name: Run Tests
-        run: pytest
+        run : pytest
 
   build-and-push:
     needs: test # Only build if tests pass!

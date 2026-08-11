@@ -1,2 +1,3 @@
 .venv/
 docker_token.txt
+.pytest_cache

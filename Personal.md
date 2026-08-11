@@ -30,3 +30,9 @@ For this simple app i gonna mainly used FastApi to handle the backend since i go
 26. What is CI? .CI: **Continous Intergration is simply the process of continously Intergrating the app at each new deployment meaning after a git push we  the pipeline will run pytest and rebuild our docker container with all the modification have made in the app to avoid bugs in production**
 27. What is CD ? . CD : **Continous Delivery** this is the process where by the build container is been deliver to a cloud plateform like **Render or Fly.io passing through Github hoster code so that container can be modified and access in the new functions and featues can be make in reel time**
 28. So let create our workflow for this task  starting by creating a folder with name .github inside it create another folder with name workflows and inside the workflow we will create a file with name deploy.yml all this will be done using the **Command:** `mkdir -p .github/workflows/ ~/Documents/health-dashboard && touch deploy.yml .github/workflows` 
+29. Describe the workflow into the deployed.yml file 
+30. Then move on to https://docker.hub and create a new docker repository that will name health-dashbord since i have an account i will signin with my github account 
+31. I will go back to the github into the settings page move to the tap **Secret and Variables**.Then create 2 new secret that are in the variables 
+32. That is mainly this 2 variables
+ - secrets.DOCKERHUB_USERNAME
+ - secrets.DOCKERHUB_TOKEN (**This token is generated from docker.hub for our repository**)

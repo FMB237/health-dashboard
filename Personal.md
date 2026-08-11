@@ -26,5 +26,7 @@ For this simple app i gonna mainly used FastApi to handle the backend since i go
 22. When the docker container is been build we then used the command **docker images** to list all our local docker images where we gonna find a container with name **health-dashboard:latest** and with a small size 
 23. Now let run the command using the docker **Command :** `docker run -p 8000:8000 health-dashboard` 
 24. Now let check our docker images size using the **Command:** `docker images | grep health-dashboard` i will add the screenshoy of it here
-25. 
-26. 
+25. Since we have running docker image let move now to the CI/CD pipeline and deployement 
+26. What is CI? .CI: **Continous Intergration is simply the process of continously Intergrating the app at each new deployment meaning after a git push we  the pipeline will run pytest and rebuild our docker container with all the modification have made in the app to avoid bugs in production**
+27. What is CD ? . CD : **Continous Delivery** this is the process where by the build container is been deliver to a cloud plateform like **Render or Fly.io passing through Github hoster code so that container can be modified and access in the new functions and featues can be make in reel time**
+28. So let create our workflow for this task  starting by creating a folder with name .github inside it create another folder with name workflows and inside the workflow we will create a file with name deploy.yml all this will be done using the **Command:** `mkdir -p .github/workflows/ ~/Documents/health-dashboard && touch deploy.yml .github/workflows` 
